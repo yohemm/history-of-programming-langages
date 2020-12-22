@@ -1,0 +1,331 @@
+/*l'ensembes des pages*/
+:root{
+	--Orange: #FA9828;
+	--LBlue : #53BEF3;
+	--DBlue: #0B4599;
+	--Blue:#1AA8EF;
+	--Gray: #AEAEAE;
+	--Black: #202020;
+	--LGray: #9A9A9A;
+	--White: #EAEAEA;
+}
+*{
+	background-color: var(--White);
+	margin: 0px;
+	padding: 0px;
+	font-size: 23px;
+	font-family: "Gill Sans Extrabold", sans-serif;
+}
+/*liens de base*/
+a{
+	color: var(--Orange);
+}
+/*haut de page*/
+header{
+
+	z-index: 1000;
+	/*reste tj en haut*/
+	position:fixed;
+	width: 100%;
+	/*créé un espace*/
+	margin-bottom: 1%;
+}
+/*menu de nav*/
+ul{
+	/*enlever les décoration*/
+	list-style-type: none;
+}
+	/*style du menu*/
+nav li{
+	float: left;
+	width: 25%;
+	position: relative;
+}
+/*crée l'espace au dessus du titre*/
+nav ul::after{
+	content: "";
+	display: table;
+	clear: both;
+}
+/*menu*/
+nav{
+	margin: 0 auto;
+}
+/*lien du menu*/
+nav a{
+	/*met en ligne*/
+	display: inline-block;
+	width: 100%;
+	/*enleve les décorarion de base*/
+	text-decoration: none;
+	/*couleur blanc du text*/
+	color: var(--White);
+	/*met en blue clair*/
+	background-color: var(--Black);
+	/*cntre*/
+	text-align: center;
+	/*soulignement bleu*/
+	border-bottom: 3px solid var(--Orange);
+	/*créé un fondu*/
+	transition: 0.3s;
+}
+/*lien menu*/
+a.menu{
+	/*separation des menu*/
+	border-left: 1px solid var(--Gray);
+	/*crée les espaces du texte*/
+	height: 60px;
+	line-height: 60px;
+}
+img{
+	/*créé un fond transparent*/
+	background-color: #00000000;
+}
+
+/*quand survoler */
+nav a:hover{
+	color: var(--Black);
+	/*souligne en orange*/
+	border-bottom: 3px solid var(--White);
+	/*couleur bleu foncer*/
+	background-color: var(--LGray);
+}
+.sous {
+	/*met la position du menu déroulant au dessus des autres contenu*/
+	position: absolute;
+	z-index: 1000;
+	width: 100%;
+	max-height:0px;	
+	overflow: hidden;
+	transition: 0.3s max-height 0.2s;
+}
+#main-menu > li:hover ul {
+	max-height: 540px;
+}
+/*lien du menu deroulanr*/
+.sous a{
+	/*enleve les surlignement bleu foncer de menu*/
+	border-bottom: none;
+}
+.sous a:hover{
+	/*enleve les surlignement bleu foncer de menu*/
+	border-bottom: none;
+}
+/*a coter de menu a dérouler*/
+.deroulant > a::after {
+	/*cré un fleche a coten de menu qui permet de dérouler*/
+	content: " ▼"
+}
+/*survolement*/
+li:hover .sous {
+	display : block;
+}
+/*parti du menu deroulanr*/
+.sous li{
+	/*met le text a gauche*/
+	float: none;
+	width: 100%;
+	text-align: left;
+}
+/*lien des menu deroulant*/
+a.sous-menu{
+	/*espacement des sous menu*/
+	height: 60px;
+	line-height: 60px;
+}
+/*contenu global entre l'entete de le pide de page*/
+#content{
+	/*cré les marge a gauche et a droite*/
+	margin:0px 3% 0px 3%;
+    justify-content: center;
+}
+/*titre secondaire*/
+.contentTitle{
+	/*centre le titre*/
+	padding-top: 80px;
+	text-align: center;
+}
+
+#right_content{
+	text-align: center;
+	width: 33%;
+	float: right;
+    padding-bottom: 40px;
+    border-left: 1px solid var(--Gray);
+    padding-left: 10px;
+}
+#left_content{
+	float: left;
+	width: 66%;
+    padding-bottom: 40px;
+
+}
+.code{
+	text-align: left;
+	font-family: 'Courier New', arial, monospace;
+}
+/*trieur*/
+.selector{
+	min-width: 200px;
+/*change la taille horizontale*/
+	width: 30%;
+	/*centre le text*/
+	text-align: center;
+	/*crée de marge*/
+	margin-top: 1%;
+	/*enlever les bord de base*/
+	border-style: none;
+	/*souligne en bas*/
+	border-bottom: 1px solid var(--Gray);
+}
+/*selecteur de nombre(plus ou moins)*/
+.selectNumber{
+	/*change la taille verticale */
+	width: 15%;
+	/*texte aligne center*/
+	text-align: center;
+	/*cré des marge */
+	padding-bottom: 1%;
+	border-style: none;
+	border-bottom: 1px solid var(--Gray);
+	min-width: 80px;
+}
+
+/*page QCM*/
+#Quiz{
+	text-align: center;
+}
+/*bouton orange*/
+.GButton, .QButton{
+	min-width: 100px;
+	/*espace autour du text*/
+	padding: 1.2%;
+	/*arondi*/
+	border-radius: 3px;
+	/*text en noir*/
+	color: black;
+	/*couleur de fond(orange)*/
+	background-color: var(--Orange);
+	/*enlever les déco de base*/
+	text-decoration: none;
+	/*centre le text*/
+	text-align: center;
+	display: inline-block;
+	position: relative;
+	/*taille maximum(universelle)*/
+	width: 15%;
+}
+.QButton {
+	vertical-align: middle;
+	height: 100px;
+	margin-bottom: 10%;
+}
+.GButton:hover, .QButton:hover{
+	/*change la couleur de fond*/
+	background-color: orange;
+}
+/*liste des langages*/
+#Liste{
+	/*cenytre le text*/
+	text-align: center;
+	width: 100%
+}
+/*liste des langages lien*/
+#Liste a{
+	width: 50%;
+}
+/*contenu du plus ou moins*/
+#MOL{
+	width: 40%;
+	/*encadrement*/
+	border:2px solid var(--Gray);
+	/*arondi*/
+	border-radius: 4px;
+	/*espace*/
+	padding-top: 2%;
+	padding-bottom: 2%;
+	/*centre le text*/
+	text-align: center;
+	/*centrÃ©*/
+	position: relative;
+	left: 30%;
+}
+#MOLJS{
+	display: none;
+	width: 40%;
+	/*encadrement*/
+	border:2px solid var(--Gray);
+	/*arondi*/
+	border-radius: 4px;
+	/*espace*/
+	padding-top: 2%;
+	padding-bottom: 2%;
+	/*centre le text*/
+	text-align: center;
+	/*centrÃ©*/
+	position: relative;
+	left: 30%;
+}
+
+/*le pied de page*/
+footer{
+	width:100%;
+	/*centre le text*/
+	text-align: center;
+	/*mettre le footer tout en bas*/
+	position:fixed;
+	bottom:0%;
+	background-color: var(--Gray);
+}
+@media screen and (max-width: 540px), screen and (max-device-width: 720px){
+	.deroulant > a::after {
+	/*cré un fleche a coten de menu qui permet de dérouler*/
+	content: none !important;
+	}
+
+	#right_content{
+	text-align: center !important;
+	width: 100% !important;
+	float: right !important;
+    border-top: 1px solid var(--Gray) !important;
+	}
+
+	#left_content{
+	float: left !important;
+	width: 100% !important;
+    padding-bottom: 40px !important;
+	}
+}
+@media screen and (max-device-width: 720px){
+	.sous {
+	/*met la position du menu déroulant au dessus des autres contenu*/
+	display: none!important;
+	}
+	.LImg{
+		display: none !important;
+	}
+	.QButton{
+		margin-top: 10%;
+		margin-left: 50% !important;
+		margin-right: 50% !important;
+		height: auto !important;
+		min-height: 100px;
+		width: 250px !important;
+	}
+	a.menu{
+	/*crée les espaces du texte*/
+	height: 150px !important;
+	line-height: 150px !important;
+	}
+	.contentTitle{
+	/*centre le titre*/
+	padding-top: 160px !important;
+	text-align: center !important;
+	}
+	*{
+	font-size: 30px !important;
+	}
+	a.menu img{
+		vertical-align: middle !important;
+	}
+}
