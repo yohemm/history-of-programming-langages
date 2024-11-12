@@ -49,16 +49,15 @@ Open the index.php file with your web server.
 
 ## Features
 Highlight the main features or functionalities of the project. Consider including bullet points, lists, or descriptions.
-- Feature 1: Run the game
-- Feature 2: Run the map creator
+- Feature 1: Read articles of langages history
+- Feature 2: Evalua
 
 ---
 
 ## Technologies Used
 List the technologies, frameworks, or libraries used in this project.
-- [Python](https://www.python.org/)
-- [Pygame](https://www.pygame.org/)
-- [Pickle](https://docs.python.org/3/library/pickle.html)
+- [PHP](https://www.php.net/)
+- [MySQL](https://www.mysql.com/fr/)
 
 ---
 
