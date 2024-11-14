@@ -2,6 +2,14 @@
 # History of programming langages
 
 <!-- ![Project Banner](path/to/banner/image)  -->
+## 🌟 Project Status
+
+> **Current Status**: **:purple_circle: Finished**  
+>
+> Projet is finish but no maintained
+>  
+
+---
 
 ## Overview
 
